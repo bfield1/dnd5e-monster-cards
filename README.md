@@ -2,6 +2,7 @@
 ## A LaTeX class for creating monster stat block reference cards for Dungeons and Dragons 5th edition.
 
 Copyright (C) 2021 Bernard Field
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -80,9 +81,11 @@ the card backgrounds, doing so once every six cards.
 ```
 This command is the primary command in this class. It generates a card with its
 stat block. It occupies one sixth of an A4 page.
+
 Note that the formatting can get funny if the body text overflows from the
 card. If this occurs, you should either edit the body text to take up fewer
 lines, or use the scale keyword argument to shrink the text.
+
 Keyword arguments use PGF-TikZ, meaning you have the keyword (which may contain
 spaces), followed by an '=' sign, followed by the argument (which may contain
 spaces). Keyword arguments are delimited by commas. If the argument contains a
@@ -124,6 +127,7 @@ For most abilities. Give it the name and description.
 For attacks. Include the name of the attack/weapon (e.g. Sword), then the
 targeting information (e.g. "+4 to hit, reach 5ft, one target."), then the
 body description for what happens on a Hit (e.g. "1d8+3 slashing damage").
+
 (MeleeThrownAttack does not appear in official stat blocks, which instead
 used MeleeRangedAttack. However, I like to differentiate between the cases
 of a ranged weapon or a thrown weapon.)
@@ -147,6 +151,7 @@ block. Specify the type of spell along with the number of uses
 \Reactions
 ```
 Section headings for actions, bonus actions, and reactions respectively.
+
 (Bonus actions don't get a dedicated section in official stat blocks, instead
 occupying the space before Actions. But I like to differentiate them.)
 
