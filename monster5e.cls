@@ -197,6 +197,7 @@
 \newcommand{\attack}[4]{\textbf{#1:} \textit{#2 Attack:} #3 \textit{Hit:} #4}
 \newcommand{\MeleeAttack}[3]{\attack{#1}{Melee}{#2}{#3}}
 \newcommand{\MeleeThrownAttack}[3]{\attack{#1}{Melee or Thrown}{#2}{#3}}
+\newcommand{\MeleeRangedAttack}[3]{\attack{#1}{Melee or Ranged}{#2}{#3}}
 \newcommand{\RangedAttack}[3]{\attack{#1}{Ranged}{#2}{#3}}
 \newcommand{\MeleeSpellAttack}[3]{\attack{#1}{Melee Spell}{#2}{#3}}
 \newcommand{\RangedSpellAttack}[3]{\attack{#1}{Ranged Spell}{#2}{#3}}
