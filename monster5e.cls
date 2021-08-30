@@ -1,3 +1,18 @@
+%LaTeX Class for D&D 5e Monster Cards
+%Copyright (C) 2021  Bernard Field
+%
+%This program is free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%You should have received a copy of the GNU General Public License
+%along with this program.  If not, see <https://www.gnu.org/licenses/>.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{monster5e}[2021/08/04 Dungeons and Dragons 5e Monster Cards]
 
@@ -185,12 +200,13 @@
 \newcommand{\RangedAttack}[3]{\attack{#1}{Ranged}{#2}{#3}}
 \newcommand{\MeleeSpellAttack}[3]{\attack{#1}{Melee Spell}{#2}{#3}}
 \newcommand{\RangedSpellAttack}[3]{\attack{#1}{Ranged Spell}{#2}{#3}}
-\newcommand{\spells}[2]{\textit{#1:} #2}
+\newcommand{\spells}[2]{#1: \textit{#2}}
 % Header, to be used inside \monsterAbilities only.
 \newcommand{\abilityheader}[1]{{\headerfont[\fontscale]\pgfmathmultiply{2}{\fontscale}\vspace{\pgfmathresult pt}\underline{#1}\vspace{\pgfmathresult pt}}}
 \newcommand{\Actions}{\abilityheader{Actions}}
 \newcommand{\BonusActions}{\abilityheader{Bonus Actions}}
 \newcommand{\Reactions}{\abilityheader{Reactions}}
+\newcommand{\LegendaryActions}[1][3]{\abilityheader{Legendary Actions (#1)}}
 
 % Main body text of monster, listing its abilities.
 \newcommand{\monsterAbilities}[2][]{

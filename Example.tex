@@ -1,0 +1,31 @@
+% Example of monster5e class.
+\documentclass{monster5e}
+
+% While you can in principle write the stat blocks directly into your main .tex file,
+% I find it better to write each monster card in a separate .tex file then \input it.
+\newcommand{\ddir}{DnD_Monsters/}
+% I define a custom Input command which does two things:
+% 1) It automatically prepends the directory where my files live.
+% 2) It removes the space which \input normally inserts after its inputs.
+\newcommand{\Input}[1]{\input{\ddir #1}\unskip}
+
+% This line points to where the symbol for the card background is.
+\setBackground{MonsterBackground}
+
+\begin{document}
+
+% In creating a page of cards, there are a few things to do:
+% Put the cards with no spaces between them.
+% (You can have a space where there would be a line-break.)
+\Input{Orc.tex}
+\Input{Acolyte.tex}
+\Input{Gray Ooze.tex}
+\Input{Noble.tex}
+\Input{Bandit.tex}
+\Input{Adult Red Dragon.tex}
+
+% If you want to print with backgrounds,
+% every six cards you should enter the command \sixMonsterBackgrounds.
+
+\sixMonsterBackgrounds
+\end{document}
